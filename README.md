@@ -2,6 +2,14 @@
 
 PoreTimeNet segments sequences of three-dimensional images using a Swin Transformer spatial encoder, temporal attention and temporal decoder fusion. This framework includes data loading, training with sparse temporal annotations, validation, checkpoint saving and resumption, and sliding-window prediction.
 
+![PoreTimeNet combines a sequence of 3D CT images to segment rock, oil and brine.](docs/images/framework_overview.png)
+
+PoreTimeNet combines information across a sequence of 3D images to predict rock and fluid distributions through time.
+
+![Oil filling at 34, 35 and 36 min: greyscale images, reference segmentations, 3D predictions and PoreTimeNet predictions.](docs/images/oil_filling_comparison.png)
+
+Example from the paper: at 35 min, the 3D model misclassifies a pore as rock, while PoreTimeNet (4D) identifies brine in agreement with the reference segmentation.
+
 ## Installation
 
 Use Python 3.10 or later and install PyTorch 2.6.0 for your CPU or CUDA environment. From the repository directory:
