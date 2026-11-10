@@ -1,0 +1,38 @@
+{
+  "training": [
+    {
+      "id": "train_sample",
+      "images": [
+        "train/image_0.npy",
+        "train/image_1.npy",
+        "train/image_2.npy"
+      ],
+      "labels": {
+        "0": "train/segmentation_0.npy",
+        "2": "train/segmentation_2.npy"
+      }
+    }
+  ],
+  "validation": [
+    {
+      "id": "validation_sample",
+      "images": [
+        "validation/image_0.npy",
+        "validation/image_1.npy"
+      ],
+      "labels": {
+        "1": "validation/segmentation_1.npy"
+      }
+    }
+  ],
+  "prediction": [
+    {
+      "id": "new_sample",
+      "images": [
+        "new/image_0.npy",
+        "new/image_1.npy",
+        "new/image_2.npy"
+      ]
+    }
+  ]
+}

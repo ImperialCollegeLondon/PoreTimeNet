@@ -1,0 +1,12 @@
+PoreTimeNet
+
+The network implementation includes code derived from MONAI's Swin UNETR.
+Copyright (c) MONAI Consortium.
+MONAI: https://github.com/Project-MONAI/MONAI
+
+The original MONAI portions retain the Apache License, Version 2.0,
+provided in LICENSES/Apache-2.0.txt. PoreTimeNet adds temporal attention
+and temporal decoder fusion. These PoreTimeNet contributions are licensed
+under Creative Commons Attribution-NonCommercial 4.0 International,
+provided in LICENSE. The contribution license does not replace the
+license of the original MONAI portions.

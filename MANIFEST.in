@@ -1,0 +1,3 @@
+include README.md
+include examples/*.json
+recursive-include tests test_*.py

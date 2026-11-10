@@ -1,0 +1,78 @@
+{
+  "model": {
+    "in_channels": 1,
+    "out_channels": 3,
+    "temporal_size": 5,
+    "feature_size": 48,
+    "depths": [
+      2,
+      2,
+      2,
+      2
+    ],
+    "num_heads": [
+      3,
+      6,
+      12,
+      24
+    ],
+    "window_size": 7,
+    "patch_size": 2,
+    "spatial_dims": 3,
+    "use_checkpoint": false,
+    "use_v2": false,
+    "drop_rate": 0.0,
+    "attn_drop_rate": 0.0,
+    "dropout_path_rate": 0.0,
+    "use_encoder_temporal_block": true,
+    "use_decoder_temporal_fusion": true
+  },
+  "data": {
+    "patch_size": [
+      64,
+      64,
+      64
+    ],
+    "temporal_strides": [
+      1
+    ],
+    "samples_per_epoch": 100,
+    "cache_size": 2,
+    "max_sampling_attempts": 32,
+    "normalization": {
+      "mode": "fixed",
+      "lower": 0,
+      "upper": 65535
+    },
+    "ignore_index": -1
+  },
+  "training": {
+    "epochs": 100,
+    "batch_size": 1,
+    "learning_rate": 0.0001,
+    "weight_decay": 1e-05,
+    "optimizer": "adamw",
+    "warmup_epochs": 0,
+    "min_learning_rate": 1e-07,
+    "validation_interval": 1,
+    "num_workers": 0,
+    "seed": 42,
+    "precision": "float32",
+    "gradient_clip": 1.0,
+    "augmentation": {
+      "spatial_flip": true,
+      "temporal_reverse": true
+    }
+  },
+  "loss": {
+    "dice_weight": 1.0,
+    "ce_weight": 1.0,
+    "label_smoothing": 0.05,
+    "class_weights": null
+  },
+  "inference": {
+    "overlap": 0.5,
+    "sw_batch_size": 2,
+    "stitch_device": "cpu"
+  }
+}
